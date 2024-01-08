@@ -39,25 +39,30 @@ fetch('https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1', opti
     });
   })
 
-  let search_btn = () => {
-    const movie_name_input = document.getElementById('movie_name_input').value;
-    const card_arr = document.getElementsByClassName('col');
+let search_btn = () => {
+  const movie_name_input = document.getElementById('movie_name_input').value;
+  const card_arr = document.getElementsByClassName('col');
 
-  
-    let movie_name = '';
-    for (let i = 0; i < card_name_arr.length; i++) {
-      movie_name = card_name_arr.filter(
-        el => el.toUpperCase().indexOf(movie_name_input.toUpperCase()) > -1
-      )[i];
-      for (let i = 0; i < card_name_arr.length; i++) {
-        if (movie_name === card_name_arr[i]) {
-          card_arr[i].style = 'display:inline-block';
-        }
-      }
-
-    }
+  const card_name_arr = [];
+  for (let i = 0; i < card_arr.length; i++) {
+    card_name_arr[i] = card_arr[i].getElementsByTagName('h3')[0].innerText;
+    card_arr[i].style = 'display:none';
   }
 
-  let reset_btn = () => location.reload();
+  let movie_name = '';
+  for (let i = 0; i < card_name_arr.length; i++) {
+    movie_name = card_name_arr.filter(
+      el => el.toUpperCase().indexOf(movie_name_input.toUpperCase()) > -1
+    )[i];
+    for (let i = 0; i < card_name_arr.length; i++) {
+      if (movie_name === card_name_arr[i]) {
+        card_arr[i].style = 'display:inline-block';
+      }
+    }
 
-  let goback_btn = () => window.scrollTo(0,0);
+  }
+}
+
+let reset_btn = () => location.reload();
+
+let goback_btn = () => window.scrollTo(0, 0);
