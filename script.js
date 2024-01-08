@@ -27,7 +27,7 @@ fetch('https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1', opti
           <img src='${img_url}' alt="" onclick="alert('이 영화의 ID: ${id}')">
          <div class="info">
           <div class= wrap>
-           <h3>${movie_title}</h3>
+           <h2>${movie_title}</h2>
             <p>${overview}</p>
             <p>⭐ ${vote}</p>
             </div>
@@ -50,7 +50,7 @@ if(movie_name_input===""){
 
   const card_name_arr = [];
   for (let i = 0; i < card_arr.length; i++) {
-    card_name_arr[i] = card_arr[i].getElementsByTagName('h3')[0].innerText;
+    card_name_arr[i] = card_arr[i].getElementsByTagName('h2')[0].innerText;
     card_arr[i].style = 'display:none';
   }
 
