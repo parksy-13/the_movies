@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내배캠 선정 영화들</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Lemon&family=Nanum+Myeongjo&family=Salsa&display=swap"
+        rel="stylesheet">
+    <style>
+        .head {
+            background-color: lightblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            height: 130px;
+            width: 100%;
+            padding: 0 0 10px 0;
+        }
+        .head button{
+            border: none;
+            background-color:transparent;
+            color:white;
+            font-size: 50px;
+            font-family: 'Salsa', cursive;
+        }
+        .head button:hover{
+            font-size: 60px;
+            color: lightsalmon;
+        }
+
+        #search {
+            text-align: center;
+            width: 300px;
+            height: 40px;
+            margin: 30px auto 50px auto;
+        }
+
+        #search form fieldset{
+            border: none;
+            background-color: lightyellow;
+            width: 300px;
+            height: 40px;
+        }
+
+        #search form fieldset button {
+            border: none;
+            background-color: lightblue;
+            color: white;
+            font-family: 'Salsa', cursive;
+            width: 60px;
+            height: 35px;
+        }
+
+        #search form fieldset button:hover {
+            background-color: lightsalmon;
+            width: 70px;
+            height: 45px;
+        }
+
+        #cards {
+            text-align: center;
+        }
+
+        .inner {
+            font-family: 'Nanum Myeongjo', serif;
+            align-items: center;
+        }
+
+        .inner .wrapper {
+            align-items: center;
+            padding: 15px 30px 15px 30px;
+        }
+
+        .inner .wrapper .col {
+            border: 6px dashed skyblue;
+            border-radius: 20%;
+            text-align: center;
+            padding: 10px 100px 10px 100px;
+            margin: 20px;
+        }
+
+        footer {
+            transform: translateY(0%);
+            position: relative;
+            height: 110px;
+            background-color: lightblue;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="head">
+        <img height="50px" width="80px" src="../개인과제/trophy-removebg-preview.png" alt="">
+        <img height="50px" width="80px" src="../개인과제/trophy-removebg-preview.png" alt="">
+        <button type="button" onclick="reset_btn()">The Movies</button>
+        <img height="50px" width="80px" src="../개인과제/trophy-removebg-preview.png" alt="">
+        <img height="50px" width="80px" src="../개인과제/trophy-removebg-preview.png" alt="">
+
+    </div>
+
+    <section id="movie_search_cards">
+        <h2 style="text-align: center; font-family: 'Salsa', cursive;">Search movies</h2>
+        <div id="search">
+            <form>
+                <fieldset>
+                    <input id="movie_name_input" type="text" onkeyup="if(event.keyCode==13){search_btn()}"
+                        placeholder="영화 제목을 입력하세요">
+                    <button type="button" onclick="search_btn()"
+                        >Search</button>
+                </fieldset>
+            </form>
+        </div>
+
+        <div id="cards">
+            <div class="inner">
+                <div id="cards-box" class="wrapper">
+                    <div class="col"><a href=""><img src="" alt=""></a></div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <button type="button" onclick="goback_btn()"
+                style="border: none; background-color:transparent;color:white; font-size: 20px;"><img
+                    style="height: 40px; width: 40px;" src="../개인과제/5083008-removebg-preview.png">
+                <bt>위로 돌아가기</br>
+            </button>
+        </footer>
+
+        <script src="script.js"></script>
+</body>
+
+</html>
