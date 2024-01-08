@@ -42,12 +42,7 @@ fetch('https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1', opti
   let search_btn = () => {
     const movie_name_input = document.getElementById('movie_name_input').value;
     const card_arr = document.getElementsByClassName('col');
-  
-    const card_name_arr = [];
-    for (let i = 0; i < card_arr.length; i++) {
-      card_name_arr[i] = card_arr[i].getElementsByTagName('h3')[0].innerText;
-      card_arr[i].style = 'display:none';
-    }
+
   
     let movie_name = '';
     for (let i = 0; i < card_name_arr.length; i++) {
