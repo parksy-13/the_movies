@@ -1,0 +1,91 @@
+.head {
+    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 130px;
+    width: 100%;
+    padding: 0 0 10px 0;
+}
+.head button{
+    border: none;
+    background-color:transparent;
+    color:white;
+    font-size: 50px;
+    font-family: 'Salsa', cursive;
+}
+.head button:hover{
+    font-size: 60px;
+    color: lightsalmon;
+}
+
+#search {
+    width: 300px;
+    height: 40px;
+    margin: 30px auto 50px auto;
+}
+
+#search form fieldset{
+    border: none;
+    border-radius: 80%;
+    background-color: lightyellow;
+    width: 550px;
+    height: 50px;
+    text-align: center;
+}
+
+#search form fieldset button {
+    border: none;
+    background-color: lightblue;
+    color: white;
+    font-family: 'Salsa', cursive;
+    width: 60px;
+    height: 35px;
+}
+
+#search form fieldset button:hover {
+    background-color: lightsalmon;
+    width: 70px;
+    height: 45px;
+}
+
+#cards {
+    text-align: center;
+}
+
+.inner {
+    font-family: 'Nanum Myeongjo', serif;
+    align-items: center;
+}
+
+.inner .wrapper {
+    align-items: center;
+    padding: 15px 30px 15px 30px;
+}
+
+.inner .wrapper .col {
+    border: 6px dashed skyblue;
+    border-radius: 10%;
+    padding: 35px 100px 25px 100px;
+    margin: 20px;
+    display: inline-flex;
+    width: 30%;
+    height: auto;
+    justify-content: space-around;
+    align-items: stretch;
+    align-content:space-around;
+    flex-direction: column;
+}
+
+
+footer {
+    transform: translateY(0%);
+    position: relative;
+    height: 110px;
+    background-color: lightblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
