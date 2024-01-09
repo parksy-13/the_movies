@@ -24,7 +24,7 @@ fetch('https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1', opti
       temp_html += `
       <div class="col">
         
-          <img src='${img_url}' alt="" onclick="alert('이 영화의 ID: ${id}')">
+          <img src='${img_url}' alt="" style="width:90%;height:50%;border:auto;" onclick="alert('이 영화의 ID: ${id}')">
          <div class="info">
           <div class= wrap>
            <h2>${movie_title}</h2>
