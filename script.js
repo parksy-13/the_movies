@@ -34,28 +34,28 @@ fetch('https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1', opti
   })
 
 let searchBtn = () => {
-  const movie_name_input = document.getElementById('movie_name_input').value;
-  const card_arr = document.getElementsByClassName('col');
+  const movieNameInput = document.getElementById('movieNameInput').value;
+  const cardArr = document.getElementsByClassName('col');
 
-if(movie_name_input===""){
+if(movieNameInput===""){
   alert("입력하지 않았습니다.");
   location.reload();
 }
 
-  const card_name_arr = [];
-  for (let i = 0; i < card_arr.length; i++) {
-    card_name_arr[i] = card_arr[i].getElementsByTagName('h2')[0].innerText;
-    card_arr[i].style = 'display:none';
+  const cardNameArr = [];
+  for (let i = 0; i < cardArr.length; i++) {
+    cardNameArr[i] = cardArr[i].getElementsByTagName('h2')[0].innerText;
+    cardArr[i].style = 'display:none';
   }
 
-  let movie_name = '';
-  for (let i = 0; i < card_name_arr.length; i++) {
-    movie_name = card_name_arr.filter(
-      el => el.toUpperCase().indexOf(movie_name_input.toUpperCase()) > -1
+  let movieName = '';
+  for (let i = 0; i < cardNameArr.length; i++) {
+    movieName = cardNameArr.filter(
+      el => el.toUpperCase().indexOf(movieNameInput.toUpperCase()) > -1
     )[i];
-    for (let i = 0; i < card_name_arr.length; i++) {
-      if (movie_name === card_name_arr[i]) {
-        card_arr[i].style = 'display:inline-block';
+    for (let i = 0; i < cardNameArr.length; i++) {
+      if (movieName === cardNameArr[i]) {
+        cardArr[i].style = 'display:inline-block';
       }
     }
 
